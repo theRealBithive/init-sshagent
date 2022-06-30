@@ -1,0 +1,71 @@
+
+[tool.poetry]
+name = "xontrib-init-ssh-agent"
+version = "0.0.1"
+description = "Initializes the SSH Agent and export the environment variable"
+authors = ["Bithive <bithive@bithive.space>"]
+
+license = "MIT"
+readme = "README.md"
+
+repository = "https://github.com/theRealBithive/xontrib-init-ssh-agent"
+keywords = ['xontrib', 'xonsh']
+classifiers = [
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Topic :: System :: Shells",
+    "Topic :: System :: System Shells",
+    "Topic :: Terminals",
+    "Programming Language :: Python :: 3",
+]
+packages = [{ include = "xontrib" }]
+
+
+
+[tool.poetry.urls]
+
+Homepage = "https://github.com/theRealBithive/xontrib-init-ssh-agent"
+Documentation = "https://github.com/theRealBithive/xontrib-init-ssh-agent/blob/master/README.md"
+Code = "https://github.com/theRealBithive/xontrib-init-ssh-agent"
+"Issue tracker" = "https://github.com/theRealBithive/xontrib-init-ssh-agent/issues"
+
+
+[tool.poetry.dependencies]
+python = ">=3.7"
+xonsh = ">=0.11"
+
+
+
+[tool.poetry.dev-dependencies]
+pytest = ">=7.0"
+
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+include = '\.pyi?$'
+force-exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.pytest_cache
+  | \.tox
+  | \.vscode
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | disk-cache.sqlite3
+)/
+'''
